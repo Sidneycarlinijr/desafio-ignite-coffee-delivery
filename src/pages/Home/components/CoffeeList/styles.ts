@@ -5,13 +5,15 @@ export const CoffeeListContainer = styled.section`
   margin-bottom: 9.8125rem;
 
   h2 {
-    margin-bottom: 3.375rem;
+    margin-bottom: 1rem;
     font-weight: 800;
     font-size: 2rem;
   }
 
   @media (max-width: 960px) {
-    padding: 2rem;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
 
     h2 {
       font-size: 1.5rem;

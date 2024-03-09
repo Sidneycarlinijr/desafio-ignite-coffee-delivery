@@ -5,6 +5,7 @@ import { CartProvider } from './context/CartContext'
 import { Router } from './routes/Router'
 import { GlobalStyles } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
+import '../src/input.css'
 
 function App() {
   return (

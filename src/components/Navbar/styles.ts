@@ -41,7 +41,7 @@ export const Nav = styled.nav`
 
     a {
       img {
-        width: 5rem;
+        width: 10rem;
       }
     }
 

@@ -41,11 +41,40 @@ export function CoffeeList() {
         }
       ).then((response) => response.json())
 
-      setProducts(
-        response.map((product: Product) => {
-          return { ...product, quantity: 1 }
-        })
-      )
+      console.log(response)
+
+      setProducts([
+        {
+          id: '1',
+          name: 'Cortina Teste 1',
+          description: 'Cortina Teste 1 Descrição',
+          price: 9.95,
+          stock: 10,
+          // imgUrl: '/expresso-tradicional.svg',
+          type: ['cortina'],
+          quantity: 1,
+        },
+        {
+          id: '2',
+          name: 'Cortina Teste 1',
+          description: 'Cortina Teste 1 Descrição',
+          price: 9.95,
+          stock: 10,
+          // imgUrl: '/expresso-tradicional.svg',
+          type: ['blackout'],
+          quantity: 1,
+        },
+        {
+          id: '3',
+          name: 'Cortina Teste 1',
+          description: 'Cortina Teste 1 Descrição',
+          price: 9.95,
+          stock: 10,
+          // imgUrl: '/expresso-tradicional.svg',
+          type: ['blackout'],
+          quantity: 1,
+        },
+      ])
     }
     fetchData()
   }, [])
@@ -74,12 +103,14 @@ export function CoffeeList() {
 
   return (
     <CoffeeListContainer>
-      <h2>Nossos cafés</h2>
+      <h2 className="text-center">Nossos produtos</h2>
 
       <CoffeeCardsContainer>
         {products.map((product) => (
           <CoffeeCard key={product.id}>
-            <img src={product.imgUrl} alt="Café Expresso Tradicional" />
+            {product.imgUrl && (
+              <img src={product.imgUrl} alt="Café Expresso Tradicional" />
+            )}
             <CoffeeTypes>
               {product.type.map((type, index) => (
                 <span key={index}>{type}</span>
